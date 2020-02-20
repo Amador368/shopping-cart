@@ -1,18 +1,44 @@
 <header class="c-header">
-    <div class="c-header__item">
-        <h1 class="c-header__title">Store</h1>
-    </div>
-    <div>
-        <h2 class="c-header__text">My city: Los Angeles</h2>
-    </div>
-    <div class="c-header__item">
-        <h2 class="c-header__text">8 800 505-04-83</h2>
-    </div>
-    <div class="c-header__item">
-        <div class="c-header__text">
-            Shipping     Blog     Company      My account
+    <section class="c-header__top">    
+        <div class="c-header__item">
+            <h1 class="c-header__title">Store</h1>
         </div>
-    </div>
+        <div>
+            <h2 class="c-header__text">My city: <span class="c-header__text-location">Los Angeles</span></h2>
+        </div>
+        <div class="c-header__item">
+            <h2 class="c-header__text">8 800 505-04-83</h2>
+        </div>
+        <div class="c-header__item">
+            <div class="c-header__text">
+                <nav class="c-navigation">
+                    <ul class="c-navigation-list">
+                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">Shipping</a></li>               
+                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">Blog</a></li>
+                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">Company</a></li>
+                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">My account</a></li>
+                    </ul>
+                </nav>            
+            </div>
+        </div>
+    </section>
+    <section class="c-header__bottom">
+        <div class="c-subheader__search">
+            <i class="c-subheader__search-icon">icon</i>
+            <input class="c-subheader__search-input" type="text" placeholder="Search products by SKU or name">
+        </div>
+        <div class="c-subheader__buttons">
+            <div class="c-cart__badge">
+                <button class="c-cart__badge-text">
+                    <i>icon</i>
+                    MY CART
+                </button>
+                <button class="c-cart__badge-count">
+                    12
+                </button>
+            </div>
+        </div>
+    </section>
 </header>
 <nav>
 </nav>
@@ -21,5 +47,3 @@
 </main>
 <footer>
 </footer>
-<h1>Hola mundo</h1>
-<p>Find me in app/views/home/index.html.erb</p>

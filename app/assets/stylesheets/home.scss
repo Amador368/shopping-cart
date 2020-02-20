@@ -4,20 +4,95 @@
 
 $yellow: #f8cb00;
 $purple: #6364d8;
+$purple02: #393ab1;
+$black01: #2d2d2d;
 
 .c-header {
-    align-items: center;
     background-color: $yellow;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 6em;
+    border-top: 4px solid $purple;
+    padding: 1em 7em;
         .c-header__item {
             font-size: 1em;
         }
         .c-header__text {
             font-size: 1em;
+            font-weight: normal;
         }
         .c-header__title {
+            font-weight: normal;
             font-size: 1.625em;
         }
+        .c-header__text-location {
+            color: $purple;
+        }
+}
+.c-header__top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+.c-navigation-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .c-navigation__item {
+        padding: 0 .5em;
+    }
+    .c-navigation__link {
+        color: $black01;
+        text-decoration: none;        
+    }
+}
+.c-header__bottom {
+    display: flex;
+    justify-content: flex-end;
+    .c-subheader__search {
+        background-color: white;
+        height: 50px;
+        width: 660px;
+        display: flex;
+        align-items: center;
+
+    }
+    .c-subheader__search-icon {
+        margin: 0 1em;
+    }
+    .c-subheader__search-input {
+        height: 100%;
+        border: 0;
+        padding: 0;
+    }
+    .c-cart__badge {
+        background-color: $purple;
+        display: flex;
+        justify-content: space-between;
+        width: 176px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .c-cart__badge-text, .c-cart__badge-count {
+        border-width: 0;
+        color: #ffffff;
+        cursor: pointer;
+        height: 50px;
+        &:focus {
+            outline: none
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, .1)   
+        }
+    }
+    .c-subheader__buttons {
+        margin-left: 1em;
+    }
+    .c-cart__badge-text {        
+        background-color: $purple;
+        width: 127px;     
+    }
+    .c-cart__badge-count {
+        width: 49px;
+        background-color: $purple02;
+    }
 }
