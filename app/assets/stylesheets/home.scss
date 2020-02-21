@@ -6,25 +6,27 @@ $yellow: #f8cb00;
 $purple: #6364d8;
 $purple02: #393ab1;
 $black01: #2d2d2d;
+$white: #ffffff;
+$gray: #a3a3a3;
 
 .c-header {
     background-color: $yellow;
     border-top: 4px solid $purple;
     padding: 1em 7em;
-        .c-header__item {
-            font-size: 1em;
-        }
-        .c-header__text {
-            font-size: 1em;
-            font-weight: normal;
-        }
-        .c-header__title {
-            font-weight: normal;
-            font-size: 1.625em;
-        }
-        .c-header__text-location {
-            color: $purple;
-        }
+    .c-header__item {
+        font-size: 1em;
+    }
+    .c-header__text {
+        font-size: 1em;
+        font-weight: normal;
+    }
+    .c-header__title {
+        font-weight: normal;
+        font-size: 1.625em;
+    }
+    .c-header__text-location {
+        color: $purple;
+    }
 }
 .c-header__top {
     align-items: center;
@@ -74,7 +76,7 @@ $black01: #2d2d2d;
     }
     .c-cart__badge-text, .c-cart__badge-count {
         border-width: 0;
-        color: #ffffff;
+        color: $white;
         cursor: pointer;
         height: 50px;
         &:focus {
@@ -94,5 +96,45 @@ $black01: #2d2d2d;
     .c-cart__badge-count {
         width: 49px;
         background-color: $purple02;
+    }
+}
+
+main {
+    padding: 0 7em;
+}
+.main-container {
+    display: flex;
+}
+.c-menu {
+    margin-top: -66px;
+    width: 285px;
+    height: 578px;
+    border-radius: 4px;
+    box-shadow: 0 16px 34px 7px rgba(121, 121, 121, 0.1);
+    background-color: $white;
+    .c-menu__title {
+        color: $gray;
+        font-size: 0.688em;
+        text-transform: uppercase;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .c-menu__list {
+        list-style: none;
+        padding-left: 20px;
+    }
+    .c-menu__category {
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+    .c-menu__category__item {
+        padding-bottom: 13px;
+    }
+    .c-menu__subcategory {
+        text-decoration: none;
+        color: $gray;
+        &:hover {
+            color: $yellow;
+        }
     }
 }
