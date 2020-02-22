@@ -6,6 +6,7 @@ $yellow: #f8cb00;
 $purple: #6364d8;
 $purple02: #393ab1;
 $black01: #2d2d2d;
+$black02: rgba(0, 0, 0, 0.78);
 $white: #ffffff;
 $gray: #a3a3a3;
 $gray02: #e1e1e1;
@@ -16,10 +17,16 @@ $gray02: #e1e1e1;
 .mr-3 {
     margin-right: 3em;
 }
+.u-vissible-md {
+    display: none;
+}
+u-hidden-md {
+    display: block;
+}
 .c-header {
-    background-color: $yellow;
-    border-top: 4px solid $purple;
-    padding: 1em 7em;
+    background-color: $yellow;    
+    padding: 0 2em;
+    padding-top: 13px;
     .c-header__item {
         font-size: 1em;
     }
@@ -57,11 +64,12 @@ $gray02: #e1e1e1;
 .c-header__bottom {
     display: flex;
     justify-content: flex-end;
+    padding-top: 8px;
     .c-subheader__search {
         background-color: white;
         border-radius: 4px;
         height: 50px;
-        width: 660px;
+        width: 100%;
         display: flex;
         align-items: center;
 
@@ -108,12 +116,26 @@ $gray02: #e1e1e1;
 }
 
 main {
-    padding: 0 7em;
+        padding: 0 1em;
 }
 .main-container {
     display: flex;
 }
+.c-menu__mobile {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: $black02;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 2em 0;
+    margin-bottom: 1.8em;
+    padding-bottom: 5px;
+    width: 100%;
+}
 .c-menu {
+    display:none;
     margin-top: -66px;
     width: 285px;
     height: 578px;
@@ -180,4 +202,37 @@ main {
 .c-products__category--selected {
     color: $black01;
     font-size: 1.688em;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .c-header {
+        border-top: 4px solid $purple;
+        padding: 1em 7em;
+    }
+    main {
+        padding: 0 7em;
+    }
+    .u-vissible-md {
+        display: block;
+    }
+    .u-hidden-md {
+        display: none;
+    }
+    .c-subheader__search {
+        width: 660px;
+    }
+    .c-header__bottom {
+        padding-top: 0;
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {    
 }
