@@ -13,6 +13,17 @@ $white: #ffffff;
 $gray: #a3a3a3;
 $gray02: #e1e1e1;
 
+@font-face {
+    font-family: "circular";
+    src: asset-url('/assets/CircularStd-Book.otf') format('truetype');
+}
+
+body {
+    font-size: 16px;
+    font-family: "circular";
+    margin: 0;
+}
+
 .color-purple {
     color: $purple;
 }
@@ -80,6 +91,7 @@ u-hidden-md {
         margin: 0 1em;
     }
     .c-subheader__search-input {
+        font-size: 0.938em;
         height: 100%;
         border: 0;
         padding: 0;
@@ -243,13 +255,18 @@ main {
 .o-product__description, .o-product__price {
     text-align: center;
     font-size: 1.125em;
+    margin-bottom: .89em;
 }
 .o-product__description {
     color:$black03;
-    min-height: 49px;
+    //min-height: 49px;
+    padding: 0 1em;
+    margin-top: 0;
 }
 .o-product__price {
     color: $yellow;
+    margin-top: 0;
+    //margin-bottom: .8em;
 }
 .c-card__actions {
     
