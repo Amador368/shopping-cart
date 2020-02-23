@@ -115,8 +115,9 @@ u-hidden-md {
     }
 }
 
-main {
-        padding: 0 1em;
+main {    
+    padding: 0 2em;
+    margin-bottom: 5em;
 }
 .main-container {
     display: flex;
@@ -124,7 +125,7 @@ main {
 .c-menu__mobile {
     border-radius: 0;
     border: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     background: transparent;
     color: $black02;
     font-size: 1em;
@@ -169,7 +170,7 @@ main {
     }
 }
 .c-products__container {
-    padding-left: 2em;
+    padding-left: 0;
     width: 100%;
 }
 .c-products__pager {
@@ -182,8 +183,8 @@ main {
     font-size: 0.938em;
 }
 .c-products__filter {
-    border-bottom: solid 1px $gray02;
     display: flex;
+    flex-direction: column;
     font-size: 0.875em;
     justify-content: space-between;
     text-transform: uppercase;
@@ -191,9 +192,11 @@ main {
 .c-products__filter__list {
     padding-left: 0;
     list-style: none;
+    margin-bottom: 0;
 }
 .c-products__filter__list__item {
-    display: inline-block;
+    //display: inline-block;
+    display: block;
 }
 .o-filter__name {
     color: $gray;
@@ -202,12 +205,25 @@ main {
 .c-products__category--selected {
     color: $black01;
     font-size: 1.688em;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.c-products__list {
+    padding: 2em 0;
+}
+.c-card {
+    border-radius: 4px;
+    box-shadow: 0 4px 14px 7px rgba(121, 121, 121, 0.05);
+    border: solid 1px #e4e4e4;
+    background-color: $white;
+    width: 193px;
+    height: 354px;   
+}
+.c-card__media {
+    text-align: center;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-}
-// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) {}
 @media (min-width: 768px) {
     .c-header {
         border-top: 4px solid $purple;
@@ -228,11 +244,17 @@ main {
     .c-header__bottom {
         padding-top: 0;
     }
+    .c-products__filter {
+        border-bottom: solid 1px $gray02;
+        flex-direction: row;
+        justify-content: space-between;        
+    }
+    .c-products__filter__list__item {
+        display: inline-block;
+    }
+    .c-products__container {
+        padding-left: 2em;
+    }
 }
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-
-}
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {    
-}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
