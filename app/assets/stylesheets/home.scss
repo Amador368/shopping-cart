@@ -5,8 +5,10 @@
 $yellow: #f8cb00;
 $purple: #6364d8;
 $purple02: #393ab1;
+$purple03: #5859c2;
 $black01: #2d2d2d;
 $black02: rgba(0, 0, 0, 0.78);
+$black03: #373738;
 $white: #ffffff;
 $gray: #a3a3a3;
 $gray02: #e1e1e1;
@@ -107,11 +109,17 @@ u-hidden-md {
     }
     .c-cart__badge-text {        
         background-color: $purple;
-        width: 127px;     
+        width: 127px;
+        &:active {
+            background-color: $purple;
+        }   
     }
     .c-cart__badge-count {
         width: 49px;
         background-color: $purple02;
+        &:active {
+            background-color: $purple02;
+        }  
     }
 }
 
@@ -216,11 +224,53 @@ main {
     box-shadow: 0 4px 14px 7px rgba(121, 121, 121, 0.05);
     border: solid 1px #e4e4e4;
     background-color: $white;
+    overflow: hidden;
     width: 193px;
-    height: 354px;   
+    height: 354px;
+    &:hover {
+        .c-card__content {
+            transform: translateY(0);
+        }
+    }
+}
+.c-card__content {
+    transform: translateY(50px);
+    transition: all .2s;
 }
 .c-card__media {
     text-align: center;
+}
+.o-product__description, .o-product__price {
+    text-align: center;
+    font-size: 1.125em;
+}
+.o-product__description {
+    color:$black03;
+    min-height: 49px;
+}
+.o-product__price {
+    color: $yellow;
+}
+.c-card__actions {
+    
+}
+.o-product__button {
+    background-color: $purple;
+    border-width: 0;
+    color: $white;
+    cursor: pointer;
+    font-size: 1em;
+    height: 50px;
+    width: 100%;
+    &:hover {
+        background-color: $purple03;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        background-color: $purple;
+    }
 }
 
 @media (min-width: 576px) {}
