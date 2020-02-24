@@ -50,9 +50,20 @@ u-hidden-md {
     .c-header__title {
         font-weight: normal;
         font-size: 1.625em;
+        width: 190px;
     }
     .c-header__text-location {
         color: $purple;
+        &:hover {
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    .c-header__text-phone {
+        &:hover {
+            color: $white;
+            cursor: pointer;
+        }
     }
 }
 .c-header__top {
@@ -66,73 +77,75 @@ u-hidden-md {
     list-style: none;
     margin: 0;
     padding: 0;
-    .c-navigation__item {
-        padding: 0 .5em;
-    }
-    .c-navigation__link {
-        color: $black01;
-        text-decoration: none;        
-    }
+}
+.c-navigation__item {    
+    padding-left: 1em;
+}
+.c-navigation__link {
+    color: $black01;
+    text-decoration: none;     
+    &:hover {
+        color: $white;
+    }   
 }
 .c-header__bottom {
     display: flex;
     justify-content: flex-end;
     padding-top: 8px;
-    .c-subheader__search {
-        background-color: white;
-        border-radius: 4px;
-        height: 50px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-
+}
+.c-subheader__search {
+    background-color: white;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.c-subheader__search-icon {
+    margin: 0 1em;
+}
+.c-subheader__search-input {
+    font-size: 0.938em;
+    height: 100%;
+    border: 0;
+    padding: 0;
+}
+.c-cart__badge {
+    background-color: $purple;
+    display: flex;
+    justify-content: space-between;
+    width: 176px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.c-cart__badge-text, .c-cart__badge-count {
+    border-width: 0;
+    color: $white;
+    cursor: pointer;
+    height: 50px;
+    &:focus {
+        outline: none
     }
-    .c-subheader__search-icon {
-        margin: 0 1em;
+    &:hover {
+        background-color: rgba(0, 0, 0, .1)   
     }
-    .c-subheader__search-input {
-        font-size: 0.938em;
-        height: 100%;
-        border: 0;
-        padding: 0;
-    }
-    .c-cart__badge {
+}
+.c-subheader__buttons {
+    margin-left: 1em;
+}
+.c-cart__badge-text {        
+    background-color: $purple;
+    width: 127px;
+    &:active {
         background-color: $purple;
-        display: flex;
-        justify-content: space-between;
-        width: 176px;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-    .c-cart__badge-text, .c-cart__badge-count {
-        border-width: 0;
-        color: $white;
-        cursor: pointer;
-        height: 50px;
-        &:focus {
-            outline: none
-        }
-        &:hover {
-            background-color: rgba(0, 0, 0, .1)   
-        }
-    }
-    .c-subheader__buttons {
-        margin-left: 1em;
-    }
-    .c-cart__badge-text {        
-        background-color: $purple;
-        width: 127px;
-        &:active {
-            background-color: $purple;
-        }   
-    }
-    .c-cart__badge-count {
-        width: 49px;
+    }   
+}
+.c-cart__badge-count {
+    width: 49px;
+    background-color: $purple02;
+    &:active {
         background-color: $purple02;
-        &:active {
-            background-color: $purple02;
-        }  
-    }
+    }  
 }
 
 main {    
@@ -156,7 +169,7 @@ main {
     width: 100%;
 }
 .c-menu {
-    display:none;
+    //display:none;
     margin-top: -66px;
     width: 285px;
     height: 578px;
@@ -173,6 +186,7 @@ main {
     .c-menu__list {
         list-style: none;
         padding-left: 20px;
+        width: 285px;
     }
     .c-menu__category {
         text-transform: uppercase;
@@ -221,6 +235,7 @@ main {
 .o-filter__name {
     color: $gray;
     margin-bottom: 0;
+    cursor: pointer;
 }
 .c-products__category--selected {
     color: $black01;
@@ -294,10 +309,10 @@ main {
 @media (min-width: 768px) {
     .c-header {
         border-top: 4px solid $purple;
-        padding: 1em 7em;
+        padding: 1em 8em;
     }
     main {
-        padding: 0 7em;
+        padding: 0 8em;
     }
     .u-vissible-md {
         display: block;
