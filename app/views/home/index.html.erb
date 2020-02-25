@@ -1,18 +1,24 @@
 <header class="c-header">
     <section class="c-header__top">    
         <div class="c-header__item">
-            <h1 class="c-header__title">Store</h1>
-        </div>
-        <div class="u-vissible-md">
-            <h2 class="c-header__text">My city: <span class="c-header__text-location">Los Angeles</span></h2>
+            <h1 class="c-header__title u-text-bold">Store</h1>
         </div>
         <div class="c-header__item u-vissible-md">
-            <h2 class="c-header__text"><span class="c-header__text-phone">8 800 505-04-83</span></h2>
+            <div class="c-header__item--icon">
+                <%= image_tag("/assets/location-filled@2x.png", alt: "location", class: "location__icon") %>
+                <h2 class="c-header__text u-text-bold"> My city: <span class="c-header__text-location">Los Angeles</span></h2>
+            </div>            
+        </div>
+        <div class="c-header__item u-vissible-md">
+            <div class="c-header__item--icon">
+                <%= image_tag("/assets/phone-filled@2x.png", alt: "phone", class: "phone__icon") %>
+                <h2 class="c-header__text u-text-bold"><span class="c-header__text-phone">8 800 505-04-83</span></h2>
+            </div>            
         </div>
         <div class="c-header__item u-vissible-md">
             <div class="c-header__text">
                 <nav class="c-navigation">
-                    <ul class="c-navigation-list">
+                    <ul class="c-navigation-list u-text-bold">
                         <li class="c-navigation__item"><a class="c-navigation__link" href="#">Shipping</a></li>               
                         <li class="c-navigation__item"><a class="c-navigation__link" href="#">Blog</a></li>
                         <li class="c-navigation__item"><a class="c-navigation__link" href="#">Company</a></li>
@@ -22,21 +28,26 @@
             </div>
         </div>
         <div class="c-header__mobile-buttons u-hidden-md">
-            cart - menu
+            <button class="menu-mobile__cart">
+                <%= image_tag("/assets/cart-iconfont@2x.png",  alt: "cart", class: "cart-icon") %>
+            </button>
+            <button class="cart-mobile__button">
+                <%= image_tag("/assets/menu-iconfont@2x.png",  alt: "menu", class: "cart-icon") %>
+            </button>
         </div>
     </section>
     <section class="c-header__bottom">
         <div class="c-subheader__search">
-            <i class="c-subheader__search-icon">icon</i>
-            <input class="c-subheader__search-input" type="text" placeholder="Search products by SKU or name">
+            <%= image_tag("/assets/search-icon@2x.png",  alt: "search", class: "c-subheader__search-icon") %>  
+            <input class="c-subheader__search-input u-text-bold" type="text" placeholder="Search products by SKU or name">
         </div>
         <div class="c-subheader__buttons u-vissible-md">
             <div class="c-cart__badge">
-                <button class="c-cart__badge-text">
-                    <i>icon</i>
-                    MY CART
+                <button class="c-cart__badge-text u-text-bold">
+                    <%= image_tag("/assets/cart-iconfont@2x.png",  alt: "cart", class: "cart-icon") %>
+                    <span>MY CART</span>                     
                 </button>
-                <button class="c-cart__badge-count">
+                <button class="c-cart__badge-count u-text-bold">
                     12
                 </button>
             </div>
@@ -79,7 +90,7 @@
             </ul>
         </nav>
         <section class="c-products__container">
-            <div class="c-products__pager">
+            <div class="c-products__pager u-text-bold">
                 <div>
                    <h2 class="c-products__category--selected">Creams & Gels</h2>
                 </div>
@@ -87,7 +98,7 @@
                     <p class="c-products__pager__text">Showing 60 of 392</p>                    
                 </div>
             </div>
-            <div class="c-products__filter">
+            <div class="c-products__filter u-text-bold">
                 <div>
                     <ul class="c-products__filter__list">
                         <li class="c-products__filter__list__item">
