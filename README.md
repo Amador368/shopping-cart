@@ -1,14 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+En esta sección se agregaran las caracteristicas de la aplicación.
 
 * Ruby version
-
+  Ruby: 2.6.3
 * System dependencies
-
+  Yarn: 2
+  PostgreSQL: 12.1
 * Configuration
 
 * Database creation
