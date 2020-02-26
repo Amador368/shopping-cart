@@ -121,18 +121,20 @@
                 </div>
             </div>
             <section class="c-products__list">
-                <div class="c-card">
-                    <div class="c-card__media">
-                        <img src="/images/product01a.png" alt="rss feed" />
-                    </div>
-                    <div class="c-card__content">
-                        <p class="o-product__description">Missha All Around Safe Block Sebum Zero Sun</p>
-                        <p class="o-product__price">$4.00</p>
-                        <div class="c-card__actions">
-                            <button class="o-product__button">Add to cart</button>
+                <% @products.each do |product| %>
+                    <div class="c-card">
+                        <div class="c-card__media">
+                            <img src="/images/product01a.png" alt="image" />
+                        </div>
+                        <div class="c-card__content">
+                            <p class="o-product__description"><%= product.name %></p>
+                            <p class="o-product__price">$<%= product.price %></p>
+                            <div class="c-card__actions">
+                                <button class="o-product__button">Add to cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>                
+                <% end %>
             </section> 
         </section>
     </section>
