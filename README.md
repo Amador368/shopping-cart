@@ -3,10 +3,14 @@
 En esta sección se agregaran las caracteristicas de la aplicación.
 
 * Ruby version
-  Ruby: 2.6.3
+2.6.3
+* Rails version
+6.0.2.1
 * System dependencies
-  Yarn: 2
-  PostgreSQL: 12.1
+Yarn: 2.0
+Bundler: 2.1.4
+* Database
+PostgreSQL: 12.1
 * Configuration
 
 * Database creation
