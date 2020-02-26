@@ -124,7 +124,7 @@
                 <% @products.each do |product| %>
                     <div class="c-card">
                         <div class="c-card__media">
-                            <img src="/images/product01a.png" alt="image" />
+                            <%= image_tag(product.image_main,  alt: "product", class: "image") %>
                         </div>
                         <div class="c-card__content">
                             <p class="o-product__description"><%= product.name %></p>
