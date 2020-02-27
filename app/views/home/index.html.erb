@@ -73,7 +73,7 @@
             <h2 class="c-menu__title">All categories</h2>
             <ul class="c-menu__list">
                 <li class="c-menu__category">Face</li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Creams & gels</a></li>
+                <li class="c-menu__category__item"><a class="c-menu__subcategory c-menu__subcategory-status--active" href="">Creams & gels</a></li>
                 <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Patches</a></li>
                 <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Emulsions</a></li>
                 <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Toners</a></li>
@@ -94,8 +94,10 @@
                 <div>
                    <h2 class="c-products__category--selected">Creams & Gels</h2>
                 </div>
-                <div class="u-vissible-md">
-                    <p class="c-products__pager__text">Showing 60 of 392</p>                    
+                <div class="u-vissible-md pager__buttons">
+                    <p class="c-products__pager__text">Showing 60 of 392</p>
+                    <a href="#"><%= image_tag("/assets/prev-page.png",  alt: "prev-page", class: "prev-page-button") %></a>
+                    <a href="#"><%= image_tag("/assets/next-page.png",  alt: "next-page", class: "next-page-button") %></a>                 
                 </div>
             </div>
             <div class="c-products__filter u-text-bold">
@@ -124,7 +126,7 @@
                 <% @products.each do |product| %>
                     <div class="c-card">
                         <div class="c-card__media">
-                            <%= image_tag(product.image_main,  alt: "product", class: "image") %>
+                            <%= image_tag(product.image_main,  alt: "product", class: "c-card-media__main") %>
                         </div>
                         <div class="c-card__content">
                             <p class="o-product__description"><%= product.name %></p>
@@ -141,3 +143,11 @@
 </main>
 <footer>
 </footer>
+<section class="c-sidebar">
+    <section class="c-sidebar__header">
+        <div></div>
+        <div>cart - MY CART</div>
+    </section>
+    <section class="c-sidebar__body"></section>
+    <section class="c-sidebar__footer"></section>
+<section>
