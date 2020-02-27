@@ -1,153 +1,226 @@
-<header class="c-header">
-    <section class="c-header__top">    
-        <div class="c-header__item">
-            <h1 class="c-header__title u-text-bold">Store</h1>
-        </div>
-        <div class="c-header__item u-vissible-md">
-            <div class="c-header__item--icon">
-                <%= image_tag("/assets/location-filled@2x.png", alt: "location", class: "location__icon") %>
-                <h2 class="c-header__text u-text-bold"> My city: <span class="c-header__text-location">Los Angeles</span></h2>
-            </div>            
-        </div>
-        <div class="c-header__item u-vissible-md">
-            <div class="c-header__item--icon">
-                <%= image_tag("/assets/phone-filled@2x.png", alt: "phone", class: "phone__icon") %>
-                <h2 class="c-header__text u-text-bold"><span class="c-header__text-phone">8 800 505-04-83</span></h2>
-            </div>            
-        </div>
-        <div class="c-header__item u-vissible-md">
-            <div class="c-header__text">
-                <nav class="c-navigation">
-                    <ul class="c-navigation-list u-text-bold">
-                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">Shipping</a></li>               
-                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">Blog</a></li>
-                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">Company</a></li>
-                        <li class="c-navigation__item"><a class="c-navigation__link" href="#">My account</a></li>
-                    </ul>
-                </nav>            
+<section id="app-main-container" class="sidebar-close">
+    <div class="overlay"></div>
+    <header class="c-header">
+        <section class="c-header__top">    
+            <div class="c-header__item">
+                <h1 class="c-header__title u-text-bold">Store</h1>
             </div>
-        </div>
-        <div class="c-header__mobile-buttons u-hidden-md">
-            <button class="menu-mobile__cart">
-                <%= image_tag("/assets/cart-iconfont@2x.png",  alt: "cart", class: "cart-icon") %>
-            </button>
-            <button class="cart-mobile__button">
-                <%= image_tag("/assets/menu-iconfont@2x.png",  alt: "menu", class: "cart-icon") %>
-            </button>
-        </div>
-    </section>
-    <section class="c-header__bottom">
-        <div class="c-subheader__search">
-            <%= image_tag("/assets/search-icon@2x.png",  alt: "search", class: "c-subheader__search-icon") %>  
-            <input class="c-subheader__search-input u-text-bold" type="text" placeholder="Search products by SKU or name">
-        </div>
-        <div class="c-subheader__buttons u-vissible-md">
-            <div class="c-cart__badge">
-                <button class="c-cart__badge-text u-text-bold">
-                    <%= image_tag("/assets/cart-iconfont@2x.png",  alt: "cart", class: "cart-icon") %>
-                    <span>MY CART</span>                     
+            <div class="c-header__item u-vissible-md">
+                <div class="c-header__item--icon">
+                    <%= image_tag("/assets/location-filled@2x.png", alt: "location", class: "location__icon") %>
+                    <h2 class="c-header__text u-text-bold"> My city: <span class="c-header__text-location">Los Angeles</span></h2>
+                </div>            
+            </div>
+            <div class="c-header__item u-vissible-md">
+                <div class="c-header__item--icon">
+                    <%= image_tag("/assets/phone-filled@2x.png", alt: "phone", class: "phone__icon") %>
+                    <h2 class="c-header__text u-text-bold"><span class="c-header__text-phone">8 800 505-04-83</span></h2>
+                </div>            
+            </div>
+            <div class="c-header__item u-vissible-md">
+                <div class="c-header__text">
+                    <nav class="c-navigation">
+                        <ul class="c-navigation-list u-text-bold">
+                            <li class="c-navigation__item"><a class="c-navigation__link" href="#">Shipping</a></li>               
+                            <li class="c-navigation__item"><a class="c-navigation__link" href="#">Blog</a></li>
+                            <li class="c-navigation__item"><a class="c-navigation__link" href="#">Company</a></li>
+                            <li class="c-navigation__item"><a class="c-navigation__link" href="#">My account</a></li>
+                        </ul>
+                    </nav>            
+                </div>
+            </div>
+            <div class="c-header__mobile-buttons u-hidden-md">
+                <button class="menu-mobile__cart">
+                    <%= image_tag("/assets/cart-iconfont@2x.png", id: 'mobile-open-sidebar', alt: "cart", class: "cart-icon") %>
                 </button>
-                <button class="c-cart__badge-count u-text-bold">
-                    12
+                <button class="cart-mobile__button">
+                    <%= image_tag("/assets/menu-iconfont@2x.png",  alt: "menu", class: "cart-icon") %>
                 </button>
             </div>
-        </div>
-    </section>
-    <section class="c-header__mobile-menu u-hidden-md">
-        <div>
-            <select class="c-menu__mobile">
-                <option>Categorías</option>
-                <option>Face</option>
-                <option>Body</option>
-                <option>Foot</option>
-                <option>Hands</option>
-                <option>Hair</option>
-                <option>Makeup</option>
-            </select>
-        </div>
-    </section>
-</header>
-<main>
-    <section class="main-container">
-        <nav class="c-menu u-vissible-md">
-            <h2 class="c-menu__title">All categories</h2>
-            <ul class="c-menu__list">
-                <li class="c-menu__category">Face</li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory c-menu__subcategory-status--active" href="">Creams & gels</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Patches</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Emulsions</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Toners</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Face cleansing</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Make up removal</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Scrubs</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Peeling</a></li>
-                <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Masks</a></li>
-                <li class="c-menu__category">Body</li>
-                <li class="c-menu__category">Foot</li>
-                <li class="c-menu__category">Hands</li>
-                <li class="c-menu__category">Hair</li>
-                <li class="c-menu__category">Makeup</li>
-            </ul>
-        </nav>
-        <section class="c-products__container">
-            <div class="c-products__pager u-text-bold">
-                <div>
-                   <h2 class="c-products__category--selected">Creams & Gels</h2>
-                </div>
-                <div class="u-vissible-md pager__buttons">
-                    <p class="c-products__pager__text">Showing 60 of 392</p>
-                    <a href="#"><%= image_tag("/assets/prev-page.png",  alt: "prev-page", class: "prev-page-button") %></a>
-                    <a href="#"><%= image_tag("/assets/next-page.png",  alt: "next-page", class: "next-page-button") %></a>                 
+        </section>
+        <section class="c-header__bottom">
+            <div class="c-subheader__search">
+                <%= image_tag("/assets/search-icon@2x.png",  alt: "search", class: "c-subheader__search-icon") %>  
+                <input class="c-subheader__search-input u-text-bold" type="text" placeholder="Search products by SKU or name">
+            </div>
+            <div class="c-subheader__buttons u-vissible-md">
+                <div class="c-cart__badge" id="open-sidebar">
+                    <button class="c-cart__badge-text u-text-bold">
+                        <%= image_tag("/assets/cart-iconfont@2x.png",  alt: "cart", class: "cart-icon") %>
+                        <span>MY CART</span>                     
+                    </button>
+                    <button class="c-cart__badge-count u-text-bold">
+                        12
+                    </button>
                 </div>
             </div>
-            <div class="c-products__filter u-text-bold">
-                <div>
-                    <ul class="c-products__filter__list">
-                        <li class="c-products__filter__list__item">
-                        <p class="o-filter__name mr-3">Brand: <span class="color-purple">All Brands</span></p>
-                        </li>
-                        <li class="c-products__filter__list__item">
-                        <p class="o-filter__name mr-3">Skin Type: <span class="color-purple">For Oily Skin</span></p>
-                        </li>
-                        <li class="c-products__filter__list__item">
-                        <p class="o-filter__name">Age: <span class="color-purple">30+</span>
-                        </p></li>
-                    </ul>                    
-                </div>
-                <div>
-                    <ul class="c-products__filter__list">
-                        <li class="c-products__filter__list__item">
-                        <p class="o-filter__name">Sort: <span class="color-purple">By popularity</span></p>
-                        </li>
-                    </ul>
-                </div>
+        </section>
+        <section class="c-header__mobile-menu u-hidden-md">
+            <div>
+                <select class="c-menu__mobile">
+                    <option>Categorías</option>
+                    <option>Face</option>
+                    <option>Body</option>
+                    <option>Foot</option>
+                    <option>Hands</option>
+                    <option>Hair</option>
+                    <option>Makeup</option>
+                </select>
             </div>
-            <section class="c-products__list">
-                <% @products.each do |product| %>
-                    <div class="c-card">
-                        <div class="c-card__media">
-                            <%= image_tag(product.image_main,  alt: "product", class: "c-card-media__main") %>
-                        </div>
-                        <div class="c-card__content">
-                            <p class="o-product__description"><%= product.name %></p>
-                            <p class="o-product__price">$<%= product.price %></p>
-                            <div class="c-card__actions">
-                                <button class="o-product__button">Add to cart</button>
+        </section>
+    </header>
+    <main>
+        <section class="main-container">
+            <nav class="c-menu u-vissible-md">
+                <h2 class="c-menu__title">All categories</h2>
+                <ul class="c-menu__list">
+                    <li class="c-menu__category">Face</li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory c-menu__subcategory-status--active" href="">Creams & gels</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Patches</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Emulsions</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Toners</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Face cleansing</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Make up removal</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Scrubs</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Peeling</a></li>
+                    <li class="c-menu__category__item"><a class="c-menu__subcategory" href="">Masks</a></li>
+                    <li class="c-menu__category">Body</li>
+                    <li class="c-menu__category">Foot</li>
+                    <li class="c-menu__category">Hands</li>
+                    <li class="c-menu__category">Hair</li>
+                    <li class="c-menu__category">Makeup</li>
+                </ul>
+            </nav>
+            <section class="c-products__container">
+                <div class="c-products__pager u-text-bold">
+                    <div>
+                    <h2 class="c-products__category--selected">Creams & Gels</h2>
+                    </div>
+                    <div class="u-vissible-md pager__buttons">
+                        <p class="c-products__pager__text">Showing 60 of 392</p>
+                        <a href="#"><%= image_tag("/assets/prev-page.png",  alt: "prev-page", class: "prev-page-button") %></a>
+                        <a href="#"><%= image_tag("/assets/next-page.png",  alt: "next-page", class: "next-page-button") %></a>                 
+                    </div>
+                </div>
+                <div class="c-products__filter u-text-bold">
+                    <div>
+                        <ul class="c-products__filter__list">
+                            <li class="c-products__filter__list__item">
+                            <p class="o-filter__name mr-3">Brand: <span class="color-purple">All Brands</span></p>
+                            </li>
+                            <li class="c-products__filter__list__item">
+                            <p class="o-filter__name mr-3">Skin Type: <span class="color-purple">For Oily Skin</span></p>
+                            </li>
+                            <li class="c-products__filter__list__item">
+                            <p class="o-filter__name">Age: <span class="color-purple">30+</span>
+                            </p></li>
+                        </ul>                    
+                    </div>
+                    <div>
+                        <ul class="c-products__filter__list">
+                            <li class="c-products__filter__list__item">
+                            <p class="o-filter__name">Sort: <span class="color-purple">By popularity</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="c-products__list">
+                    <% @products.each do |product| %>
+                        <div class="c-card">
+                            <div class="c-card__media">
+                                <%= image_tag(product.image_main,  alt: "product", class: "c-card-media__main") %>
+                            </div>
+                            <div class="c-card__content">
+                                <p class="o-product__description"><%= product.name %></p>
+                                <p class="o-product__price">$<%= product.price %></p>
+                                <div class="c-card__actions">
+                                    <button class="o-product__button">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="modal" style="display:none;">
+                                <section class="modal-header">
+                                    <div></div>
+                                    <div>close</div>
+                                </section>
+                                <section class="modal-body">
+                                    <div class="modal-image">
+                                        <%= image_tag(product.image_detail,  alt: "product", class: "c-card-media__detail") %>
+                                    </div>
+                                    <div class="modal-product">
+                                        <div class="modal-product-title u-text-bold"><%= product.name %></div>
+                                        <div class="modal-product-price">
+                                            <div  class="color-yellow modal-product-price-text u-text-bold">$<%= product.price %></div>
+                                            <div class="u-text-bold modal-product-wight-text"><%= product.weight %> ml</div>                                        
+                                        </div>
+                                        <div class="modal-product-button">
+                                            <div>Add to cart<div>
+                                        </div>
+                                        <div class="modal-product-description u-text-bold">
+                                            <%= product.description %>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="modal-footer">
+                                </section>
                             </div>
                         </div>
+                    <% end %>
+                </section> 
+            </section>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <section class="c-sidebar" id="sidebar">        
+        <section class="c-sidebar__header">
+            <div class="c-sidebar__header--close">
+
+                <%= image_tag("/assets/close-icon.png", id: 'close-sidebar',  alt: "close", class: "close-icon") %>
+            </div>
+            <div class="c-sidebar__header--title">
+                <button class="menu-mobile__cart">
+                    <%= image_tag("/assets/cart-iconfont@2x.png",  alt: "cart", class: "cart-icon") %>
+                </button>
+                <div class="c-sidebar__header--title__text">
+                MY CART
+                </div>         
+            </div>
+        </section>
+        <section class="c-sidebar__body">
+            <div class="c-card--small">
+                <div class="c-card--small__content">
+                    <div>
+                        <%= image_tag("/assets/cart_01.png",  alt: "cart", class: "cart-product-selected") %>
                     </div>
-                <% end %>
-            </section> 
+                    <div class="c-card--small__content__text">Missha All Around Safe Block Sebum Zero Sun</div>
+                    <div class="c-card--small__content__text__price">$4.00</div>
+                </div>
+                <div>
+                    <%= image_tag("/assets/close-icon-2.png", alt: "cart", class: "close-icon-2") %>
+                </div>
+            </div>
+            <div class="c-card--small">
+                <div class="c-card--small__content">
+                    <div>
+                        <%= image_tag("/assets/cart_02.png",  alt: "cart", class: "cart-product-selected") %>
+                    </div>
+                    <div class="c-card--small__content__text">Innisfree Green Tea Balancing Cream</div>
+                    <div class="c-card--small__content__text__price">$18.00</div>
+                </div>
+                <div>
+                    <%= image_tag("/assets/close-icon-2.png",  alt: "cart", class: "close-icon-2") %>
+                </div>
+            </div>
+        </section>
+        <section class="c-sidebar__footer">
+            <div class="order-total">
+                <div class="total-text">Total</div>
+                <div class="color-yellow text-total-value">$22.00</div>
+            </div>
+            <div class="btn-checkout">
+                Checkout
+            </div>
         </section>
     </section>
-</main>
-<footer>
-</footer>
-<section class="c-sidebar">
-    <section class="c-sidebar__header">
-        <div></div>
-        <div>cart - MY CART</div>
-    </section>
-    <section class="c-sidebar__body"></section>
-    <section class="c-sidebar__footer"></section>
-<section>
+</section>
+
