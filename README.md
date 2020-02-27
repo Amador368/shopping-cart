@@ -14,8 +14,8 @@ PostgreSQL: 12.1
 
 ## Configuration
 
-* Database creation
-
+## Database creation
+    para poblar la base de datos con algunos registros > rails db:seed
 * Database initialization
 
 * How to run the test suite
