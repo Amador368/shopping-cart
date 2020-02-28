@@ -304,6 +304,7 @@ main {
 }
 .c-card {
     border-radius: 4px;
+    cursor: pointer;
     box-shadow: 0 4px 14px 7px rgba(121, 121, 121, 0.05);
     border: solid 1px #e4e4e4;
     background-color: $white;
@@ -382,6 +383,13 @@ main {
     top: 5px;
     left: 50%;
     transform: translate(-50%, 0);
+    .c-card-media__detail {
+        width: 295px;
+    }
+    .modal-image {
+        display: flex;
+    justify-content: center;
+    }
 }
 .modal-header {
     display: flex;
@@ -541,10 +549,13 @@ main {
 @media (min-width: 768px) {
     .modal-open .modal {
         padding: 3em;
-        width: 99%;
+        width: 90%;
         top: 100px;
         .modal-body {
             flex-direction: row;
+        }
+        .c-card-media__detail {
+            width: auto;
         }
     }
 
