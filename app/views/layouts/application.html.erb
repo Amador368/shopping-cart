@@ -35,7 +35,8 @@
         document.getElementById("app-main-container").classList.add("sidebar-close");
         document.getElementById("app-main-container").classList.remove("sidebar-open");
       }
-      function showModal(){
+      function showModal(event){
+        if (event.target.className == 'o-product__button') return;
         document.getElementById("app-main-container").classList.add("modal-open");
         document.getElementById("app-main-container").classList.remove("modal-close");
       }

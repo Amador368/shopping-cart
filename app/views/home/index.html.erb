@@ -126,7 +126,7 @@
                 </div>
                 <section class="c-products__list">
                     <% @products.each do |product| %>
-                        <div class="c-card" onclick="showModal()">
+                        <div class="c-card" onclick="showModal(event)">
                             <div class="c-card__media">
                                 <%= image_tag(product.image_main,  alt: "product", class: "c-card-media__main") %>
                             </div>
@@ -169,7 +169,7 @@
                     <div class="u-text-bold modal-product-wight-text">50 ml</div>                                        
                 </div>
                 <div class="modal-product-button">
-                    <div><button class="o-product__button u-text-left">Add to cart</button></div>
+                    <div><button class="o-product__button u-text-left" onclick="addToCart()">Add to cart</button></div>
                 </div>
                 <div class="modal-product-description u-text-bold">
                     A portable cooling eye stick that instantly relieves puffy, tired eyes by hydrating the delicate skin and minimizing fine lines around the eye for a refreshed and revitalized look.
