@@ -45,6 +45,9 @@ body {
 .u-text-bold {
     font-family: "Montserrat-Bold";
 }
+.u-text-left {
+    text-align: left;
+}
 .c-header {
     background-color: $yellow;    
     padding: 0 2em;
@@ -364,31 +367,62 @@ main {
         background-color: $purple;
     }
 }
-.modal {
+.modal-close .modal {
+    display: none;
+}
+.modal-open .modal {
     border-radius: 4px;
     box-shadow: 0 16px 34px 7px rgba(121, 121, 121, 0.1);
     background-color: #ffffff;
     padding: 3em;
+    width: 85%;
+    padding: 1em;
+    z-index: 2;
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 .modal-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .modal-body {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 .modal-product-title {
     font-size: 28px;
     color: #373738;
+    text-align: left;
+    margin-top: .5em;
+}
+.modal-product-reviews {
+    text-align: left;
+}
+.modal-product-reviews__text {
+    font-size: 0.875em;	
+    color: #818181;
 }
 .modal-product-description {
     color: #585858;
     line-height: 1.88;
+    text-align: left;
+}
+.modal-product-button {
+    margin: 1.5em 0;
+    .o-product__button {
+        padding: 0 1.5em;
+    }
+}
+.close_modal {
+    cursor: pointer;
 }
 .modal-product-price {
     display: flex;
     justify-content: space-between;
+    margin-top: .5em;
 }
 .modal-product-price-text {
     font-size: 23px;
@@ -396,7 +430,7 @@ main {
 .modal-product-wight-text {
     color: #818181;
 }
-.sidebar-open .overlay {
+.sidebar-open .overlay, .modal-open .overlay{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -505,6 +539,15 @@ main {
 }
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
+    .modal-open .modal {
+        padding: 3em;
+        width: 99%;
+        top: 100px;
+        .modal-body {
+            flex-direction: row;
+        }
+    }
+
     .sidebar-open .c-sidebar, .c-sidebar__footer {
         width: 428px;
     }
@@ -551,6 +594,9 @@ main {
     }
 }
 @media (min-width: 992px) {
+    .modal-open .modal {
+        width: 859px;
+    }
     main {
         padding: 0 2em;
     }

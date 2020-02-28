@@ -26,7 +26,7 @@
         btnCloseSidebar.onclick = closeSidebar;
       };
       
-      function openSidebar(event) {
+      function openSidebar() {
         document.getElementById("app-main-container").classList.add("sidebar-open");
         document.getElementById("app-main-container").classList.remove("sidebar-close");
         
@@ -34,6 +34,14 @@
       function closeSidebar() {
         document.getElementById("app-main-container").classList.add("sidebar-close");
         document.getElementById("app-main-container").classList.remove("sidebar-open");
+      }
+      function showModal(){
+        document.getElementById("app-main-container").classList.add("modal-open");
+        document.getElementById("app-main-container").classList.remove("modal-close");
+      }
+      function hideModal(){
+        document.getElementById("app-main-container").classList.add("modal-close");
+        document.getElementById("app-main-container").classList.remove("modal-open");
       }
     </script>
 </html>

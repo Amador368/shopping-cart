@@ -126,7 +126,7 @@
                 </div>
                 <section class="c-products__list">
                     <% @products.each do |product| %>
-                        <div class="c-card">
+                        <div class="c-card" onclick="showModal()">
                             <div class="c-card__media">
                                 <%= image_tag(product.image_main,  alt: "product", class: "c-card-media__main") %>
                             </div>
@@ -137,32 +137,6 @@
                                     <button class="o-product__button">Add to cart</button>
                                 </div>
                             </div>
-                            <div class="modal" style="display:none;">
-                                <section class="modal-header">
-                                    <div></div>
-                                    <div>close</div>
-                                </section>
-                                <section class="modal-body">
-                                    <div class="modal-image">
-                                        <%= image_tag(product.image_detail,  alt: "product", class: "c-card-media__detail") %>
-                                    </div>
-                                    <div class="modal-product">
-                                        <div class="modal-product-title u-text-bold"><%= product.name %></div>
-                                        <div class="modal-product-price">
-                                            <div  class="color-yellow modal-product-price-text u-text-bold">$<%= product.price %></div>
-                                            <div class="u-text-bold modal-product-wight-text"><%= product.weight %> ml</div>                                        
-                                        </div>
-                                        <div class="modal-product-button">
-                                            <div>Add to cart<div>
-                                        </div>
-                                        <div class="modal-product-description u-text-bold">
-                                            <%= product.description %>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="modal-footer">
-                                </section>
-                            </div>
                         </div>
                     <% end %>
                 </section> 
@@ -171,6 +145,41 @@
     </main>
     <footer>
     </footer>
+    <!--hidden modal-->
+    <div class="modal modal-closed" id="modal">
+        <section class="modal-header">                                     
+            <div onclick="hideModal()"><%= image_tag('/assets/close-icon-3.png',  alt: "close modal", class: "close_modal") %></div>
+        </section>
+        <section class="modal-body">
+            <div class="modal-image">
+                <%= image_tag('/assets/product01b.png',  alt: "product", class: "c-card-media__detail") %>
+            </div>
+            <div class="modal-product">
+                <div class="modal-product-reviews">
+                    <div>
+                        <%= image_tag('/assets/filled-star.png',  alt: "star", class: "star") %>
+                        <%= image_tag('/assets/filled-star.png',  alt: "star", class: "star") %>
+                        <%= image_tag('/assets/filled-star.png',  alt: "star", class: "star") %>
+                    </div>
+                    <div class="modal-product-reviews__text"> 21 Revies</div>
+                </div>
+                <div class="modal-product-title u-text-bold">Missha All Around Safe Block Sebum Zero Sun</div>
+                <div class="modal-product-price">
+                    <div  class="color-yellow modal-product-price-text u-text-bold">$4.00</div>
+                    <div class="u-text-bold modal-product-wight-text">50 ml</div>                                        
+                </div>
+                <div class="modal-product-button">
+                    <div><button class="o-product__button u-text-left">Add to cart</button></div>
+                </div>
+                <div class="modal-product-description u-text-bold">
+                    A portable cooling eye stick that instantly relieves puffy, tired eyes by hydrating the delicate skin and minimizing fine lines around the eye for a refreshed and revitalized look.
+                </div>
+            </div>
+        </section>
+        <section class="modal-footer">
+        </section>
+    </div>
+    <!--/-->
     <section class="c-sidebar" id="sidebar">        
         <section class="c-sidebar__header">
             <div class="c-sidebar__header--close">
@@ -221,6 +230,8 @@
                 Checkout
             </div>
         </section>
+    
+    
     </section>
 </section>
 
